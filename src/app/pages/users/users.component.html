@@ -1,0 +1,32 @@
+<div class="customBg">
+    <div class="container customC ">
+        <a routerLink="user/add/0" class="btn btn-primary customB"> Click Here To Book Now </a>
+        <h3> Movie Bookings </h3>
+       
+
+        <table class="table customTb " >
+            <thead class="customT">
+                <th> Ticket No.</th>
+                <th> Name </th>
+                <th> Movie </th>
+                <th> Seat no. </th>
+                <th> Edit </th>
+                <th> Delete </th>
+
+            </thead>
+        
+            <tbody>
+                <tr *ngFor="let user of users ">
+                    <td> {{user.ticketNo}} </td>
+                    <td> {{user.name}} </td>
+                    <td> {{user.movie}} </td>
+                    <td>  {{user.seat}} </td>
+                    <td> <button class="btn btn-danger" > <a [routerLink]="['user/edit',user.id]" style="color: white;"> Edit </a></button></td>
+                    <td> <button class="btn btn-danger" (click)="onDelete(user.id)"> Del </button> </td>
+        
+                </tr>
+            </tbody>
+        
+        </table>
+        </div>
+</div>

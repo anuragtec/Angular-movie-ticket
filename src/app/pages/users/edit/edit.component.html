@@ -1,0 +1,27 @@
+
+<div class="container mt-5 cudtomEdit">
+    <h2> {{header}} </h2>
+
+    <form (ngSubmit)="onSubmit(f)" #f="ngForm" > 
+        <div class="form-group">
+            <label > Ticket Number</label>
+            <input type="text" class="form-control" [ngModel]="user.ticketNo" name="id">
+        </div>
+        <div class="form-group">
+            <label > Name </label>
+            <input type="text" class="form-control" [ngModel]="user.name" name="name">
+        </div>
+        <div class="form-group">
+            <label > Movie </label>
+            <input type="text" class="form-control" [ngModel]="user.movie" name="movie">
+        </div>
+        <div class="form-group">
+            <label > Seat Number</label>
+            <input type="text" class="form-control" [ngModel]="user.seat" name="seat">
+        </div>
+        <div class="form-group">
+            <button class="btn btn-primary" type="submit"> Save </button>
+        </div>
+
+    </form>
+</div>
